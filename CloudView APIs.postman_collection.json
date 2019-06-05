@@ -1,0 +1,1679 @@
+{
+	"info": {
+		"_postman_id": "117b6100-700a-437e-9bac-630d4cc931cb",
+		"name": "CloudView APIs",
+		"description": "Many features of the CloudView are available through REST APIs.\n\nPermissions:User must have the CloudView module enabled and api access permission.\n\nSwagger Documentation can be found at https://{{base_url}}/cloudview-api/swagger-ui.html#/\n\nIf you need any help, you can access support information at https://www.qualys.com/support",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rest",
+			"item": [
+				{
+					"name": "AWS",
+					"item": [
+						{
+							"name": "Get the list of connectors",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors?pageNo=0&pageSize=50",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new connector",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "vaudevillE@01",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "testa8mk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"arn\": \"string\",\r\n  \"description\": \"string\",\r\n  \"externalId\": \"string\",\r\n  \"isPortalConnector\": true,\r\n  \"name\": \"string\"\r\n}"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete the provided connectors",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"ConnectorId\",\n    \"ConnectorId\"\n]"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Download the AWS cloud formation template",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/octet-stream"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors/aws/download?externalId={{externalId}}",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors",
+										"aws",
+										"download"
+									],
+									"query": [
+										{
+											"key": "externalId",
+											"value": "{{externalId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the aws base account Id ",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors/awsBaseAccountId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors",
+										"awsBaseAccountId"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Run the provided connectors",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"ConnectorId\",\n    \"ConnectorId\"\n]"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors/run",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors",
+										"run"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the details of connector",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update the existing connector",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"arn\": \"string\",\r\n  \"description\": \"string\",\r\n  \"externalId\": \"string\",\r\n  \"isPortalConnector\": true,\r\n  \"name\": \"string\"\r\n}"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of errors encountered when executing connector",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/connectors/:connectorId/errors?pageNo=0&pageSize=50",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"connectors",
+										":connectorId",
+										"errors"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "50"
+										}
+									],
+									"variable": [
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the stats for specified control id and resource id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/evaluations/stats/:controlId/:resourceId/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"evaluations",
+										"stats",
+										":controlId",
+										":resourceId",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "controlId",
+											"value": "{{controlId}}"
+										},
+										{
+											"key": "resourceId",
+											"value": "{{resourceId}}"
+										},
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of evaluations as per the account for AWS Controls",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/evaluations/:accountId?filter={{filter}}",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"evaluations",
+										":accountId"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "{{filter}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "accountId",
+											"value": "{{accountId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the resources evaluated for the specified aws account and control id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/aws/evaluations/:accountId/resources/:controlId?filter={{filter}}&pageNo=0&pageSize=50",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"aws",
+										"evaluations",
+										":accountId",
+										"resources",
+										":controlId"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "{{filter}}"
+										},
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "50"
+										}
+									],
+									"variable": [
+										{
+											"key": "accountId",
+											"value": "{{accountId}}"
+										},
+										{
+											"key": "controlId",
+											"value": "{{controlId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Azure",
+					"item": [
+						{
+							"name": "Get the list of connectors",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/connectors?pageNo=0&pageSize=50",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"connectors"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new connector",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"applicationId\": \"string\",\r\n  \"authenticationKey\": \"string\",\r\n  \"description\": \"string\",\r\n  \"directoryId\": \"string\",\r\n  \"name\": \"string\",\r\n  \"subscriptionId\": \"string\"\r\n}"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/connectors",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"connectors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete the provided connectors",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"ConnectorId\",\n    \"ConnectorId\"\n]"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/connectors",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"connectors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Run the provided connectors",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"ConnectorId\",\n    \"ConnectorId\"\n]"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/connectors/run",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"connectors",
+										"run"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the details of connector",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/connectors/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"connectors",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update the existing connector",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"applicationId\": \"string\",\r\n  \"authenticationKey\": \"string\",\r\n  \"description\": \"string\",\r\n  \"directoryId\": \"string\",\r\n  \"name\": \"string\"\r\n}"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/connectors/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"connectors",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the stats for specified control id and resource id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/evaluations/stats/:controlId/:resourceId/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"evaluations",
+										"stats",
+										":controlId",
+										":resourceId",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "controlId",
+											"value": "{{controlId}}"
+										},
+										{
+											"key": "resourceId",
+											"value": "{{resourceId}}"
+										},
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of evaluations as per the account for Azure Controls",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/evaluations/:subscriptionId?filter={{filter}}",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"evaluations",
+										":subscriptionId"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "{{filter}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "subscriptionId",
+											"value": "{{subscriptionId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the resources evaluated for the specified Azure account and control id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/azure/evaluations/:subscriptionId/resources/:controlId?filter={{filter}}&pageNo=0&pageSize=50",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"azure",
+										"evaluations",
+										":subscriptionId",
+										"resources",
+										":controlId"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "{{filter}}"
+										},
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "50"
+										}
+									],
+									"variable": [
+										{
+											"key": "subscriptionId",
+											"value": "{{subscriptionId}}"
+										},
+										{
+											"key": "controlId",
+											"value": "{{controlId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GCP",
+					"item": [
+						{
+							"name": "Get the list of connectors",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/connectors?pageNo=0&pageSize=50",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"connectors"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new connector",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "{{name}}",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "{{description}}",
+											"type": "text"
+										},
+										{
+											"key": "configFile",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/connectors",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"connectors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete the provided connectors",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"ConnectorId\",\n    \"ConnectorId\"\n]"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/connectors",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"connectors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Run the provided connectors",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "vaudevillE@01",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "testa8mk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"ConnectorId\",\n    \"ConnectorId\"\n]"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/connectors/run",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"connectors",
+										"run"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the details of connector",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/connectors/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"connectors",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update the existing connector",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "{{name}}",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "{{description}}",
+											"type": "text"
+										},
+										{
+											"key": "configFile",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/connectors/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"connectors",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the stats for specified control id and resource id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/evaluations/stats/:controlId/:resourceId/:connectorId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"evaluations",
+										"stats",
+										":controlId",
+										":resourceId",
+										":connectorId"
+									],
+									"variable": [
+										{
+											"key": "controlId",
+											"value": "{{controlId}}"
+										},
+										{
+											"key": "resourceId",
+											"value": "{{resourceId}}"
+										},
+										{
+											"key": "connectorId",
+											"value": "{{connectorId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of evaluations as per the account for GCP Controls",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/evaluations/:projectId?filter={{filter}}",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"evaluations",
+										":projectId"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "{{filter}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "projectId",
+											"value": "{{projectId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the resources evaluated for the specified GCP account and control id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/gcp/evaluations/:projectId/resources/:controlId?filter={{filter}}&pageNo=0&pageSize=50",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"gcp",
+										"evaluations",
+										":projectId",
+										"resources",
+										":controlId"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "{{filter}}"
+										},
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "50"
+										}
+									],
+									"variable": [
+										{
+											"key": "projectId",
+											"value": "{{projectId}}"
+										},
+										{
+											"key": "controlId",
+											"value": "{{controlId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Reports",
+					"item": [
+						{
+							"name": "Create a new report configuration",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accounts\": [\n        {\n            \"accountId\": \"string\",\n            \"cloudType\": \"string\",\n            \"id\": \"string\",\n            \"name\": \"string\"\n        }\n    ],\n    \"description\": \"string\",\n    \"format\": \"string\",\n    \"mandateId\": \"string\",\n    \"policies\": [\n        {\n            \"cloudType\": \"string\",\n            \"policyId\": \"string\"\n        }\n    ],\n    \"title\": \"string\",\n    \"type\": \"string\"\n}"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/reports",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"reports"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete the provided report configs",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    \"ReportId\",\n    \"ReportId\"\n]"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/reports",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"reports"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of all the supported mandates",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/reports/mandates",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"reports",
+										"mandates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of all the supported policies",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/reports/policies",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"reports",
+										"policies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the complete data of the specified report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/reports/report_data/:reportId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"reports",
+										"report_data",
+										":reportId"
+									],
+									"variable": [
+										{
+											"key": "reportId",
+											"value": "{{reportId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the details of specified report configuration",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/reports/:reportId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"reports",
+										":reportId"
+									],
+									"variable": [
+										{
+											"key": "reportId",
+											"value": "{{reportId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update the existing report configuration",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accounts\": [\n        {\n            \"accountId\": \"string\",\n            \"cloudType\": \"string\",\n            \"id\": \"string\",\n            \"name\": \"string\"\n        }\n    ],\n    \"description\": \"string\",\n    \"format\": \"string\",\n    \"mandateId\": \"string\",\n    \"policies\": [\n        {\n            \"cloudType\": \"string\",\n            \"policyId\": \"string\"\n        }\n    ],\n    \"title\": \"string\",\n    \"type\": \"string\"\n}"
+								},
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/reports/:reportId",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"reports",
+										":reportId"
+									],
+									"variable": [
+										{
+											"key": "reportId",
+											"value": "{{reportId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the list of report configurations",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://{{base_url}}/cloudview-api/rest/v1/reports?pageNo=0&pageSize=50",
+									"protocol": "https",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cloudview-api",
+										"rest",
+										"v1",
+										"reports"
+									],
+									"query": [
+										{
+											"key": "pageNo",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "Folder for rest"
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "QualysPassword",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "QualysUsername",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "19239910-ab8b-45b6-ba4a-d4e688ff08e3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2a8aaa32-b710-4226-9282-72b4db647afe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
