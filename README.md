@@ -1,7 +1,10 @@
 # CloudView_postman_collection
 
-Qualys CloudView API gives you many ways to integrate your programs and API calls with Qualys capabilities
-You can use Swagger tool to access the REST APIs we support. However, Postman is appropriate for testing/consuming such API based on specifications, prompting for this collection.
+## License
+_**THIS SCRIPT IS PROVIDED TO YOU "AS IS."  TO THE EXTENT PERMITTED BY LAW, QUALYS HEREBY DISCLAIMS ALL WARRANTIES AND LIABILITY FOR THE PROVISION OR USE OF THIS SCRIPT.  IN NO EVENT SHALL THESE SCRIPTS BE DEEMED TO BE CLOUD SERVICES AS PROVIDED BY QUALYS**_
+
+Qualys CloudView API gives you ways to utilize many CloudView features and assist in integration with other products.
+You can use Swagger tool to access the REST APIs we support. However, Postman is appropriate for testing/consuming such APIs based on specifications, prompting for this collection.
 
 ## Qualys Platform URLs
 * Qualys US Platform 1 - https://qualysguard.qualys.com
@@ -14,7 +17,10 @@ You can use Swagger tool to access the REST APIs we support. However, Postman is
 `API: https://<Qualys Platform URLs>/cloudview-api/rest/v1/`
 
 ## API Documentation:
-API Release Notes: https://www.qualys.com/docs/release-notes/qualys-cloudview-18-api-release-notes.pdf
-API User Guide: https://www.qualys.com/docs/qualys-cloudview-api-user-guide.pdf
-User Guide: https://www.qualys.com/docs/qualys-cloud-view-user-guide.pdf
+
+* [API Release Notes](https://www.qualys.com/docs/release-notes/qualys-cloudview-18-api-release-notes.pdf)
+
+* [API User Guide](https://www.qualys.com/docs/qualys-cloudview-api-user-guide.pdf)
+
+* [CloudView User Guide](https://www.qualys.com/docs/qualys-cloud-view-user-guide.pdf)
 
