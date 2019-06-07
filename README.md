@@ -1,8 +1,6 @@
 # CloudView_postman_collection
 
-## License
-_**THIS SCRIPT IS PROVIDED TO YOU "AS IS."  TO THE EXTENT PERMITTED BY LAW, QUALYS HEREBY DISCLAIMS ALL WARRANTIES AND LIABILITY FOR THE PROVISION OR USE OF THIS SCRIPT.  IN NO EVENT SHALL THESE SCRIPTS BE DEEMED TO BE CLOUD SERVICES AS PROVIDED BY QUALYS**_
-
+## Description
 Qualys CloudView API gives you ways to utilize many CloudView features and assist in integration with other products.
 You can use Swagger tool to access the REST APIs we support. However, Postman is appropriate for testing/consuming such APIs based on specifications, prompting for this collection.
 
