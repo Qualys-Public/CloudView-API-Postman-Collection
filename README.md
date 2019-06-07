@@ -17,8 +17,6 @@ You can use Swagger tool to access the REST APIs we support. However, Postman is
 ## API Documentation:
 
 * [API Release Notes](https://www.qualys.com/docs/release-notes/qualys-cloudview-18-api-release-notes.pdf)
-
 * [API User Guide](https://www.qualys.com/docs/qualys-cloudview-api-user-guide.pdf)
-
 * [CloudView User Guide](https://www.qualys.com/docs/qualys-cloud-view-user-guide.pdf)
 
