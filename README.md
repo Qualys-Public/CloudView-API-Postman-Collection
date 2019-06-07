@@ -23,6 +23,5 @@ Qualys India Platform 1 | https://qualysguard.qg1.apps.qualys.in
 * [CloudView User Guide](https://www.qualys.com/docs/qualys-cloud-view-user-guide.pdf)
 
 ## An Example
-
-![](Example.png?raw=true)
+![](Example.PNG?raw=true)
 
