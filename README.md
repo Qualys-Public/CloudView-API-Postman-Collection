@@ -21,3 +21,8 @@ Qualys India Platform 1 | https://qualysguard.qg1.apps.qualys.in
 * [API Release Notes](https://www.qualys.com/docs/release-notes/qualys-cloudview-18-api-release-notes.pdf)
 * [API User Guide](https://www.qualys.com/docs/qualys-cloudview-api-user-guide.pdf)
 * [CloudView User Guide](https://www.qualys.com/docs/qualys-cloud-view-user-guide.pdf)
+
+## An Example
+
+![](/Example.png?raw=true)
+
