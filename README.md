@@ -5,14 +5,14 @@ Qualys CloudView API gives you ways to utilize many CloudView features and assis
 You can use Swagger tool to access the REST APIs we support. However, Postman is appropriate for testing/consuming such APIs based on specifications, prompting for this collection.
 
 ## Qualys Platform URLs
-Platform URL | URL 
+Platform Name | URL 
 ------------ | ----
-* Qualys US Platform 1 | https://qualysguard.qualys.com
-* Qualys US Platform 2 | https://qualysguard.qg2.apps.qualys.com
-* Qualys US Platform 3 | https://qualysguard.qg3.apps.qualys.com
-* Qualys EU Platform 1 | https://qualysguard.qualys.eu
-* Qualys EU Platform 2 | https://qualysapi.qg2.apps.qualys.eu
-* Qualys India Platform 1 | https://qualysguard.qg1.apps.qualys.in
+Qualys US Platform 1 | https://qualysguard.qualys.com
+Qualys US Platform 2 | https://qualysguard.qg2.apps.qualys.com
+Qualys US Platform 3 | https://qualysguard.qg3.apps.qualys.com
+Qualys EU Platform 1 | https://qualysguard.qualys.eu
+Qualys EU Platform 2 | https://qualysapi.qg2.apps.qualys.eu
+Qualys India Platform 1 | https://qualysguard.qg1.apps.qualys.in
 
 `API: https://<Qualys Platform URLs>/cloudview-api/rest/v1/`
 
