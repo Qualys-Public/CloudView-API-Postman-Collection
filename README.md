@@ -24,5 +24,5 @@ Qualys India Platform 1 | https://qualysguard.qg1.apps.qualys.in
 
 ## An Example
 
-![](/Example.png?raw=true)
+![](Example.png?raw=true)
 
