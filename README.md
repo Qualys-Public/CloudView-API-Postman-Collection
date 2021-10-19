@@ -1,3 +1,5 @@
+# This repo is no longer supported - please use https://github.com/Qualys/CloudView-API-Postman-Collection
+
 # CloudView Postman Collection
 
 ## Description
